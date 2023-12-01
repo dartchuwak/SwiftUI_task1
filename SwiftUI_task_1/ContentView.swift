@@ -5,14 +5,14 @@ struct ContentView: View {
         TabView {
             VStack(spacing: 0) {
                 ScrollView {
-                    LazyVStack {
+
                         ForEach(1...100, id: \.self) { number in
                             Text("\(number)")
                                 .font(.system(size: 24))
                                 .foregroundStyle(Color.gray)
                                 .frame(maxWidth: .infinity)
                         }
-                    }
+                    
                 }
                 .scrollClipDisabled()
                 Rectangle() // Видимый Rectangle
